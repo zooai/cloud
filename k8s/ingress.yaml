@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: zoo-cloud
+  namespace: zoo
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: hanzo-ingress
+  tls:
+    - hosts: [zoo.cloud, zoo.ngo]
+      secretName: zoo-cloud-tls
+  rules:
+    - host: zoo.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: zoo-cloud-web
+                port: { number: 80 }
+    - host: zoo.ngo
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: zoo-cloud-web
+                port: { number: 80 }
