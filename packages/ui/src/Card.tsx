@@ -1,4 +1,4 @@
-import { colors, radius, spacing } from '@zoolabs/cloud-brand'
+import { colors, radius, spacing } from '@zooai/cloud-brand'
 import type { HTMLAttributes } from 'react'
 
 export function Card(props: HTMLAttributes<HTMLDivElement>) {

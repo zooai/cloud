@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/zoolabs/cloud:latest
+          image: ghcr.io/zooai/cloud:latest
           ports:
             - containerPort: 3000
           resources:

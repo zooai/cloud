@@ -1,4 +1,4 @@
-import { colors, radius, spacing } from '@zoolabs/cloud-brand'
+import { colors, radius, spacing } from '@zooai/cloud-brand'
 import type { ButtonHTMLAttributes } from 'react'
 
 export function Button(props: ButtonHTMLAttributes<HTMLButtonElement>) {

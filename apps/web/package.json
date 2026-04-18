@@ -1,5 +1,5 @@
 {
-  "name": "@zoolabs/cloud-web",
+  "name": "@zooai/cloud-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,8 +13,8 @@
     "next": "14.2.20",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "@zoolabs/cloud-brand": "workspace:*",
-    "@zoolabs/cloud-ui": "workspace:*"
+    "@zooai/cloud-brand": "workspace:*",
+    "@zooai/cloud-ui": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "18.3.12",
