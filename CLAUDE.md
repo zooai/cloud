@@ -16,7 +16,7 @@ DeAI + DeSci. Four buckets:
 
 - Use `luxfi/*` packages, never `go-ethereum` or `ava-labs` (Zoo uses Lux blockchain infra).
 - Build on Hanzo infra (`@hanzo/iam`, `@hanzo/kms`, `@hanzo/commerce`, `@hanzo/gateway`, `@hanzo/ingress`, `@hanzo/insights`).
-- Images push to GHCR only: `ghcr.io/zoolabs/cloud:v{semver}`. Never GAR.
+- Images push to GHCR only: `ghcr.io/zooai/cloud:v{semver}`. Never GAR.
 - Secrets via `@hanzo/kms`. Never K8s secrets for app secrets.
 - Hash passwords. Argon2id preferred.
 - White-label via hostname: `zoo.cloud`/`zoo.ngo`/`zoo.network` => Zoo brand.

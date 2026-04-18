@@ -105,7 +105,7 @@ OIDC authorization_code + PKCE against `id.zoo.ngo` (a Hanzo IAM deployment).
 
 ## Image
 
-`ghcr.io/zoolabs/cloud:v{semver}` — multi-arch (amd64 + arm64), no QEMU, native runners.
+`ghcr.io/zooai/cloud:v{semver}` — multi-arch (amd64 + arm64), no QEMU, native runners.
 
 ## CI/CD
 

@@ -1,5 +1,5 @@
 {
-  "name": "@zoolabs/cloud-brand",
+  "name": "@zooai/cloud-brand",
   "version": "0.1.0",
   "private": true,
   "main": "./src/index.ts",
