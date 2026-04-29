@@ -49,10 +49,22 @@ Next.js 14 dashboard. Renders at `zoo.cloud`. Pages:
 - `/` — marketing / landing
 - `/dashboard` — logged-in user home
 - `/research` — research chain dashboards (DeSci experiments)
+- `/web3` — Web3 infrastructure powered by Bootnode (~/work/bootnode)
 - `/zips` — Zoo Improvement Proposals (governance)
 - `/community` — governance + community coordination
 - `/billing` — subscription + usage (via `@hanzo/commerce`)
 - `/account` — profile, teams, API keys (via `@hanzo/iam`)
+
+### Bootnode integration
+Web3 node hosting (validators, RPC, snapshots) is powered by Bootnode at
+`~/work/bootnode`. Bootnode runs as a white-label deployment at `web3.zoo.ngo`
+with `brand=zoo`. Zoo Cloud's `/web3` page calls the Bootnode HTTP API via
+`apps/web/src/lib/bootnode.ts`:
+- Env: `BOOTNODE_URL` (server) / `NEXT_PUBLIC_BOOTNODE_URL` (client)
+- Default: `https://web3.zoo.ngo`
+- All requests carry `X-Brand: zoo`
+- SSO via Zoo IAM (`id.zoo.ngo` / `zoo.id`); shared OIDC client
+- Bootnode endpoints used: `/v1/chains`, `/v1/chains/{id}/nodes`
 
 ### apps/api
 Backend. Thin proxy to Hanzo services + Lux OSS services via gateway.
