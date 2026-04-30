@@ -128,10 +128,10 @@ nav.primary a:hover { color: var(--fg); }
 }
 .btn.primary:hover { background: #e5e5e5; color: #000; }
 
-.try-lux {
+.try-zoo {
   position: relative;
 }
-.try-lux-panel {
+.try-zoo-panel {
   position: absolute;
   right: 0;
   top: calc(100% + 8px);
@@ -144,7 +144,7 @@ nav.primary a:hover { color: var(--fg); }
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
-.try-lux-panel h4 {
+.try-zoo-panel h4 {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -152,7 +152,7 @@ nav.primary a:hover { color: var(--fg); }
   padding: 10px 12px 6px;
   font-weight: 500;
 }
-.try-lux-panel a.app {
+.try-zoo-panel a.app {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -161,9 +161,9 @@ nav.primary a:hover { color: var(--fg); }
   color: var(--fg);
   transition: background .1s;
 }
-.try-lux-panel a.app:hover { background: rgba(255,255,255,0.06); color: var(--fg); }
-.try-lux-panel .app-name { font-size: 14px; font-weight: 500; }
-.try-lux-panel .app-desc { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.try-zoo-panel a.app:hover { background: rgba(255,255,255,0.06); color: var(--fg); }
+.try-zoo-panel .app-name { font-size: 14px; font-weight: 500; }
+.try-zoo-panel .app-desc { font-size: 12px; color: var(--muted); margin-top: 1px; }
 
 main.page {
   max-width: 1200px;

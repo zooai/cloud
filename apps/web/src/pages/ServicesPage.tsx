@@ -1,5 +1,5 @@
 const SERVICES = [
-  { name: 'Multi-chain RPC', desc: 'Dedicated endpoints across Ethereum, Solana, Bitcoin, Lux, and 100+ networks.' },
+  { name: 'Multi-chain RPC', desc: 'Dedicated endpoints across Ethereum, Solana, Bitcoin, Zoo, and 100+ networks.' },
   { name: 'MPC Wallets',     desc: 'Threshold-signed custody (CGGMP21 ECDSA + FROST EdDSA). No seed phrases, no single points.' },
   { name: 'Node Hosting',    desc: 'Validators, archive nodes, RPC, bootnodes. Managed or self-hosted on Zoo K8s.' },
   { name: 'Bridges',         desc: 'Native and wrapped cross-chain transfers via Zoo Bridge.' },
