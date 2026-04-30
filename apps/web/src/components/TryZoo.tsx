@@ -4,13 +4,13 @@ type App = { name: string; href: string; desc: string }
 
 const APPS: App[] = [
   { name: 'Node', href: '/dashboard/nodes', desc: 'Launch multi-chain RPC' },
-  { name: 'Validator', href: 'https://stake.zoo.network', desc: 'Run a Zoo validator' },
-  { name: 'Bridge', href: 'https://bridge.zoo.network', desc: 'Cross-chain assets' },
+  { name: 'Validator', href: 'https://zoo.network', desc: 'Run a Zoo validator' },
+  { name: 'Bridge', href: 'https://bridge.zoo.ngo', desc: 'Cross-chain assets' },
   { name: 'DEX', href: 'https://exchange.zoo.network', desc: 'Swap + add liquidity' },
   { name: 'Explorer', href: 'https://explore.zoo.network', desc: 'Chain data + tokens' },
-  { name: 'Wallet', href: 'https://wallet.zoo.network', desc: 'Multi-chain MPC wallet' },
+  { name: 'Wallet', href: 'https://zoo.ngo', desc: 'Multi-chain MPC wallet' },
   { name: 'Chain', href: '/dashboard/rollups', desc: 'Deploy L1/L2 rollup' },
-  { name: 'Status', href: 'https://status.zoo.network', desc: 'Uptime + incidents' },
+  { name: 'Research', href: 'https://zips.zoo.ngo', desc: 'ZIPs + DeAI/DeSci' },
 ]
 
 export function TryZoo() {

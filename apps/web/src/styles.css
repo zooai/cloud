@@ -60,17 +60,10 @@ header.site .inner {
 }
 .logo-mark {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  position: relative;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
-}
-.logo-mark::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--fg);
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  object-fit: contain;
 }
 .logo-word {
   overflow: hidden;

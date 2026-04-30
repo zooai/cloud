@@ -11,7 +11,7 @@ export function Logo() {
 
   return (
     <Link href="/" className={collapsed ? 'logo collapsed' : 'logo'}>
-      <span className="logo-mark" aria-hidden="true" />
+      <img src="/logo.svg" alt="" className="logo-mark" width="20" height="20" />
       <span className="logo-word">Zoo Cloud</span>
     </Link>
   )

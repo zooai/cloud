@@ -5,9 +5,9 @@ export function Footer() {
         <div>© {new Date().getFullYear()} Zoo Industries</div>
         <nav>
           <a href="https://zoo.network">Zoo Network</a>
-          <a href="https://docs.zoo.network">Docs</a>
+          <a href="https://zoo.ngo/docs/">Docs</a>
           <a href="https://github.com/zooai">GitHub</a>
-          <a href="https://status.zoo.network">Status</a>
+          <a href="https://zoo.ngo">Foundation</a>
         </nav>
       </div>
     </footer>

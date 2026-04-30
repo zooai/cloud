@@ -20,7 +20,7 @@ export function HomePage() {
         </p>
         <div className="actions">
           <Link href="/dashboard" className="btn primary">Start Building →</Link>
-          <a href="https://docs.zoo.network" className="btn">View Documentation</a>
+          <a href="https://zoo.ngo/docs/" className="btn">View Documentation</a>
         </div>
       </section>
 
