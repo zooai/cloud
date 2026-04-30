@@ -4,7 +4,7 @@ const FEATURES = [
   { icon: '◉', title: 'Node', desc: 'Multi-chain RPC with 99.999% uptime across 100+ networks.', href: '/services#node' },
   { icon: '▤', title: 'Data', desc: 'Token, NFT, transfer, and on-chain event APIs.', href: '/services#data' },
   { icon: '◈', title: 'Wallets', desc: 'MPC wallets with account abstraction. No seed phrases.', href: '/services#wallets' },
-  { icon: '▦', title: 'Rollups', desc: 'Launch L1/L2 rollups on Lux with native tooling.', href: '/services#rollups' },
+  { icon: '▦', title: 'Rollups', desc: 'Launch L1/L2 rollups on Zoo with native tooling.', href: '/services#rollups' },
 ]
 
 export function HomePage() {
