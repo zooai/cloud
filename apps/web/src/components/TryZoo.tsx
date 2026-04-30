@@ -27,7 +27,7 @@ export function TryZoo() {
   }, [open])
 
   return (
-    <div className="try-lux" ref={ref}>
+    <div className="try-zoo" ref={ref}>
       <button
         className="btn"
         onClick={(e) => {
@@ -38,7 +38,7 @@ export function TryZoo() {
         Try Zoo <span style={{ opacity: 0.6 }}>↓</span>
       </button>
       {open && (
-        <div className="try-lux-panel">
+        <div className="try-zoo-panel">
           <h4>Launch on Zoo</h4>
           {APPS.map((a) => (
             <a key={a.name} href={a.href} className="app">
