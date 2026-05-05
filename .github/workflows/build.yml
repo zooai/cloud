@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   ci:
-    runs-on: hanzo-build-linux-amd64
+    runs-on: zoo-build-linux-amd64
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -27,7 +27,11 @@ jobs:
   docker:
     needs: ci
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    uses: hanzoai/.github/.github/workflows/docker-build.yml@main
+    uses: zooai/.github/.github/workflows/docker-build.yml@main
     with:
       image: ghcr.io/zooai/cloud
+      runner-amd64: zoo-build-linux-amd64
+      runner-arm64: zoo-build-linux-amd64
+      runner-deploy: zoo-build-linux-amd64
+      platforms: "linux/amd64"
     secrets: inherit
