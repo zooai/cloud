@@ -5,6 +5,7 @@ import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
 import { DashboardPage } from './pages/DashboardPage'
 import { ServicesPage } from './pages/ServicesPage'
+import { AuthCallback } from './pages/AuthCallback'
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <Switch>
         <Route path="/" component={HomePage} />
         <Route path="/services" component={ServicesPage} />
+        <Route path="/auth/callback" component={AuthCallback} />
         <Route path="/dashboard" component={DashboardPage} />
         <Route>
           <main className="page">
