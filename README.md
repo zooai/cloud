@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="cloud" width="880"></p>
+
 # Zoo Cloud
 
 DeAI + DeSci platform. White-label of Hanzo's platform, branded for Zoo Labs Foundation.
