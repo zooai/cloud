@@ -121,6 +121,70 @@ nav.primary a:hover { color: var(--fg); }
 }
 .btn.primary:hover { background: #e5e5e5; color: #000; }
 
+/* Header nav: an inline row on desktop. `.nav-collapse` wraps the primary nav
+   and the action cluster; on desktop it stays inline (nav.primary flex:1 pushes
+   the actions to the far right, preserving the original layout). Below 900px it
+   collapses behind the hamburger `.nav-toggle` into a full-width dropdown so the
+   row fits a 390px viewport and every action (incl. Sign In) stays reachable. */
+.nav-toggle { display: none; }
+.nav-collapse {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 42px;
+    height: 38px;
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1;
+    background: transparent;
+    color: var(--fg);
+  }
+  .nav-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 16px 24px 22px;
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-collapse.open { display: flex; }
+  nav.primary {
+    flex: initial;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  nav.primary a { font-size: 15px; padding: 6px 0; }
+  .right-side {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .right-side .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+  }
+}
+
 .try-zoo {
   position: relative;
 }
