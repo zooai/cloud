@@ -2,7 +2,7 @@
   "name": "@zooai/cloud",
   "version": "0.1.0",
   "private": true,
-  "description": "Zoo Cloud — DeAI + DeSci platform",
+  "description": "Zoo Cloud \u2014 DeAI + DeSci platform",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "turbo": "2.3.3",
-    "typescript": "5.7.2",
+    "typescript": "^7.0.2",
     "@types/node": "24.4.0"
   },
   "packageManager": "pnpm@10.11.0",
