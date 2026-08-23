@@ -74,6 +74,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@hanzo/design':
+        specifier: ^0.5.21
+        version: 0.5.21
       '@hanzo/iam':
         specifier: ^0.11.0
         version: 0.11.0(react@19.2.5)
@@ -376,6 +379,10 @@ packages:
 
   '@fastify/merge-json-schemas@0.2.1':
     resolution: {integrity: sha512-OA3KGBCy6KtIvLf8DINC5880o5iBlDX4SxzLQS8HorJAbqluzLRn80UXU0bxZn7UOFhFgpRJDasfwn9nG4FG4A==}
+
+  '@hanzo/design@0.5.21':
+    resolution: {integrity: sha512-E2g6DZCn2IUf2AQKqPMwlVV5fz2wvIpAagFRLx33gIsJfmpyubFnx0LINjFs7UoMI1ajnwSa73k7rPteVSemUw==}
+    hasBin: true
 
   '@hanzo/iam@0.11.0':
     resolution: {integrity: sha512-AGTYSl+En0Ci3UTBJs/kJ1MjxIAKOW9pMwLD6QCFLsBZIZCp1JljESepTEs4aBLifK0L3h/j3ya53ZyU3dSXjA==}
@@ -1527,6 +1534,8 @@ snapshots:
   '@fastify/merge-json-schemas@0.2.1':
     dependencies:
       dequal: 2.0.3
+
+  '@hanzo/design@0.5.21': {}
 
   '@hanzo/iam@0.11.0(react@19.2.5)':
     dependencies:

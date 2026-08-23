@@ -1,3 +1,5 @@
+@import '@hanzo/design/tokens/fonts.css';
+
 :root {
   color-scheme: dark;
   --bg: #000;
@@ -16,8 +18,10 @@ html, body, #root { min-height: 100%; }
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "Basel Grotesk", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
+  /* .zen-book — the weight Basel Grotesk Book sat at on Zen's axis. */
+  font-variation-settings: 'wght' 497;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.01em;
