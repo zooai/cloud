@@ -1,3 +1,6 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+catalog:
+  '@hanzo/design': 0.5.24
