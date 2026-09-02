@@ -34,7 +34,7 @@ export const colors = {
 
 export const typography = {
   fontFamily: {
-    sans: '"Inter", system-ui, -apple-system, sans-serif',
+    sans: '"Zen", system-ui, -apple-system, sans-serif',
     mono: '"JetBrains Mono", ui-monospace, monospace',
   },
   fontSize: {
