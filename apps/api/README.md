@@ -1,5 +1,10 @@
 # zoo-cloud-api
 
+> **Use `apps/edge` instead, for now.** This one is a Fastify process and needs
+> a cluster to run in; the DigitalOcean account is down, which is why
+> api.zoo.cloud answers 525. `apps/edge` is the same proxy as a Cloudflare
+> Worker, running where the sites already run, with no origin to keep alive.
+
 `api.zoo.cloud` — the Zoo-branded way to reach the Hanzo API from a browser.
 
 ## Why it exists

@@ -1,0 +1,13 @@
+{
+  "name": "@zooai/cloud-edge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --test src/*.test.ts"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
