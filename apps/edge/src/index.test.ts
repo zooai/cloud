@@ -1,8 +1,31 @@
 import assert from 'node:assert/strict'
-import { test } from 'node:test'
+import { createServer } from 'node:http'
+import { after, before, test } from 'node:test'
 import worker, { type Env } from './index.ts'
 
-const env: Env = { HANZO_API_KEY: 'tenant-key', UPSTREAM: 'http://localhost:4996' }
+// The suite brings its own gateway. Pointing at one that happens to be running
+// makes a green suite depend on what else is open on this machine.
+const upstream = createServer((req, res) => {
+  if (req.url?.includes('/chat/completions')) {
+    res.writeHead(200, { 'Content-Type': 'text/event-stream' })
+    for (const word of ['Belugas ', 'are ', 'grey ', 'at ', 'birth.']) {
+      res.write(`data: ${JSON.stringify({ choices: [{ delta: { content: word } }] })}\n\n`)
+    }
+    return res.end('data: [DONE]\n\n')
+  }
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify({ sawAuth: req.headers.authorization }))
+})
+
+let env: Env
+
+before(async () => {
+  await new Promise<void>((ok) => upstream.listen(0, ok))
+  const { port } = upstream.address() as { port: number }
+  env = { HANZO_API_KEY: 'tenant-key', UPSTREAM: `http://localhost:${port}` }
+})
+
+after(() => upstream.close())
 const ask = (init: RequestInit & { origin?: string; path?: string } = {}) =>
   worker.fetch(
     new Request('https://api.zoo.cloud' + (init.path ?? '/v1/chat/completions'), {
@@ -52,7 +75,7 @@ test('with no credential it says so rather than pretending', async () => {
     new Request('https://api.zoo.cloud/v1/models', {
       headers: { origin: 'https://zoo.ngo' },
     }),
-    { UPSTREAM: 'http://localhost:4996' }
+    { UPSTREAM: env.UPSTREAM }
   )
   assert.equal(res.status, 503)
   assert.match((await res.json() as any).error.message, /no upstream credential/)
