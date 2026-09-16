@@ -9,7 +9,7 @@ on:
 
 jobs:
   ci:
-    runs-on: zoo-build-linux-amd64
+    runs-on: linux-amd64
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -27,8 +27,8 @@ jobs:
     uses: zooai/.github/.github/workflows/docker-build.yml@main
     with:
       image: ghcr.io/zooai/cloud
-      runner-amd64: zoo-build-linux-amd64
-      runner-arm64: zoo-build-linux-amd64
+      runner-amd64: linux-amd64
+      runner-arm64: linux-amd64
       runner-deploy: zoo-build-linux-amd64
       platforms: "linux/amd64"
     secrets: inherit
