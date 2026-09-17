@@ -81,7 +81,7 @@ app.all('/v1/*', async (req, reply) => {
       'content-type': String(req.headers['content-type'] ?? 'application/json'),
       accept: String(req.headers.accept ?? '*/*'),
     },
-    body: req.method === 'GET' || req.method === 'HEAD' ? undefined : (req.body as Buffer),
+    body: req.method === 'GET' || req.method === 'HEAD' ? undefined : (req.body as Buffer<ArrayBuffer>),
   })
 
   reply

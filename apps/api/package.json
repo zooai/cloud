@@ -7,13 +7,13 @@
     "dev": "node --experimental-strip-types --watch src/index.ts",
     "start": "node --experimental-strip-types src/index.ts",
     "test": "node --test src/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "../../node_modules/tsgo/bin/tsc --noEmit --incremental false"
   },
   "dependencies": {
     "fastify": "5.1.0"
   },
   "devDependencies": {
     "@types/node": "24.4.0",
-    "typescript": "5.7.2"
+    "typescript": "6.0.3"
   }
 }

@@ -8,7 +8,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "../../node_modules/tsgo/bin/tsc --noEmit --incremental false"
   },
   "dependencies": {
     "@zooai/cloud-brand": "workspace:*",
@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "@types/react": "18.3.12",
-    "typescript": "5.7.2"
+    "typescript": "6.0.3"
   }
 }

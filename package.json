@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "turbo": "2.3.3",
-    "typescript": "^7.0.2",
+    "tsgo": "npm:typescript@7.0.2",
+    "typescript": "6.0.3",
     "@types/node": "24.4.0"
   },
   "packageManager": "pnpm@10.11.0",
